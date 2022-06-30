@@ -1,0 +1,614 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'arial', sans-serif;
+    background: #f1f1f1
+}
+
+
+
+
+
+
+/*-------------navigation---------------*/
+
+.nav-gauche{
+    width: 300px;
+    height: 100vh;
+    min-height: 800px;
+    background: #030303;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+
+}
+.blocs-menu
+{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blocs-menu span
+{
+    font-size: 20px;
+    text-align: center;
+    position:relative;
+    font-weight: 700;
+    cursor: pointer;
+}
+.blocs-menu span a
+{
+    text-decoration: none;
+    color: #f1c40d
+}
+.blocs-menu span::after
+{
+ content: '';   
+ display: block;
+ width: 0px;
+ margin: 5px auto 0 auto;
+ height: 2px;
+ background: #fbecdf;
+ transition: all 0.2s ease-out;
+}
+.blocs-menu span:hover::after
+{
+    width: 100%
+}
+
+
+
+/* photo profil */
+
+.blocs-menu:nth-child(1)
+{
+width: 100%;
+height: 25%;
+background: #030303;    
+}
+.portrait
+{
+    margin: 25px 0;
+    position: relative;
+    background:#f1c40d;
+    overflow: hidden;
+    border-radius:50%;
+    
+}
+
+.logo-mail
+{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 25px 0;
+    position: relative;
+    color:#030303
+}
+
+
+
+
+
+
+
+
+/*------------------Acceuil-----------------*/
+
+
+
+.accueil 
+{
+    background: #f1f1f1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 100vh;
+    min-height: 900px;
+    width: calc(100% - 300px);
+    margin-left: auto;
+    position: relative;
+}
+h1 
+{
+    font-size: 90px;
+    font-family: 'Abril Fatface', sans-serif;
+    margin: 0 60px;
+    padding-top: 210px;
+}
+.txt-animation 
+{
+    font-size: 30px;
+    margin: 10px 0 10px 60px;
+}
+.btn-acc 
+{
+    display: inline-flex;
+    width: 200px;
+    height: 50px;
+    text-decoration: none;
+    background: #000;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+    margin: 10px 0 0 0;
+    border-radius: 2px;
+    font-size: 18px;
+    transition: transform 0.2s ease-in-out;
+}
+.btn-acc:hover
+{
+    transform: scale(1.02);
+}
+.btn-acc1 
+{
+    margin: 10px 0 0 60px;
+}
+.btn-acc2 
+{
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    font-weight: 700;
+}
+.medias 
+{
+    display: flex;
+    margin-left: 60px;
+    margin-top: 30px;
+}
+.media 
+{
+    width: 60px;
+    height: 60px;
+    background: #333;
+    border-radius: 50%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.media2 
+{
+    background: transparent;
+    border: 2px solid #333;
+}
+.icone-medias 
+{
+    width: 30px;
+}
+.btn-rond 
+{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 0 0 #333;
+    background: #333;
+}
+    
+.logo-btn-rond-acc
+{
+    width: 35px;
+}
+
+
+
+/*-----------------présentation----------------*/
+
+.presentation 
+{
+    width: 100%;
+    position: relative;
+    background: #f1c40d;
+    overflow: hidden;
+    border-top: 1px dashed #333;
+    border-bottom: 1px dashed #333;
+    color: #303030;
+}
+
+.titre-pres 
+{
+    font-family: 'Abril Fatface',sans-serif ;
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+    margin: 50px 0 70px 0;
+    padding-left: 300px;
+}
+
+.container-presentation 
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 130px 0;
+    flex-shrink: 0;
+    padding-left: 300px;
+}
+.pres-gauche 
+{
+    width: 600px;
+    flex-shrink: 0;
+    margin-bottom: 50px;
+    padding-left: 120px;
+    padding-top: 20px;
+}
+.pres-gauche h3 
+{
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+.pres-gauche hr 
+{
+    width: 60px;
+    margin: 0 auto 20px auto;
+}
+.pres-gauche p 
+{
+    text-align: justify;
+}
+
+.pres-droite 
+{
+    width: 600px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+.liste-presentation 
+{
+    list-style-type: none;
+    padding: 10px 0 50px 110px;
+}
+.chiffre-style 
+{
+    font-family: 'Abril Fatface', sans-serif;
+    font-size: 40px;
+}
+.txt-liste 
+{
+    font-size: 27px;
+    font-weight: bold;
+    display: inline;
+}
+
+
+
+/*-----------section portfolio mes designs-----------*/
+
+
+
+.portfolio
+{
+    width: 100%
+}
+.titre-port
+{
+    font-family: 'Abril Fatface',sans-serif ;
+    text-decoration: underline;
+    text-align: center;
+    padding: 50px 0;
+    font-size: 50px;
+    padding-left: 300px;
+
+}
+.cont-portfolio
+{
+    width: 100%;
+    height: auto;
+    margin: 0 auto 100px auto;
+    padding-left: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.item /*--- se sont les cartes---*/
+{
+margin: 20px;
+width: 420px;
+height: 400px;
+background: #030303;
+color: #f1c40d;
+transition: transform 0.5s ease-out;
+box-shadow: 0 0 10px rgba(0,0,0,0,5);
+}
+.item:hover
+{
+    transform: translateY(-6px);
+}
+.cont-img-port /*--image contenu dans les cartes--*/
+{
+    width: 100%;
+    height:220px;
+    overflow: hidden /*--on cache se qui dépasse--*/
+}
+.cont-img-port img
+{
+    width: 100%;
+    height: auto;
+}
+.item h3
+{
+    padding: 10px 10px 0;
+    font-size: 22px
+}
+.item p
+{
+    padding: 10px 10px 0;
+}
+.btn-projets
+{
+    display: block;
+    margin: 10px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #f1f1f1;
+    text-decoration: none;
+    border: 1px solid #f1c40d;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.btn-projets::after
+{
+    content:'';
+    height: 240px;
+    width: 100px;
+    background: rgba(255,255,255,0.4);
+    display: block;
+    position: absolute;
+    left:-150px;
+    top:-50px;
+    transform: rotate(-45deg)
+}
+.btn-projets:hover::after
+{
+    transition: transform 0.3s 0.1s linear;
+    transform: translateX(400px)
+}
+
+
+
+
+
+/*--------- Section Range -------------- */
+
+
+
+.section-range 
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 200px;
+    border-top: 1px dashed #f1c40d;
+    border-bottom: 1px dashed #f1c40d;
+    background:#030303;
+    color: #f1c40d;
+    position: relative;
+    z-index: -1;
+}
+.range-cont 
+{
+    position: relative;
+}
+.titre-exp 
+{
+    font-family: 'Abril Fatface', sans-serif;
+    text-decoration: underline;
+    font-size: 40px;
+    text-align: center;
+    margin: 80px 0 90px 0;
+    padding-left: 300px;
+}
+.grille-skill 
+{
+    display: grid;
+    grid-template: repeat(3,80px) / repeat(2, 500px);
+    grid-gap: 50px;
+    padding-left: 300px;
+}
+.barre-skill 
+{
+    height: 15px;
+    background: #f1c40d;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.barre-grises 
+{
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 500px;
+    height: 15px;
+    background: rgb(216,216,216);
+    border-radius: 5px;
+}
+.b1 
+{
+    width: 70%;
+    background: #f1c40d;
+}
+.b2 
+{
+    width: 60%;
+    background: #f1c40d;
+}
+.b3 
+{
+    width: 70%;
+    background: #f1c40d;
+}
+.b4 
+{
+    width: 80%;
+    background: #f1c40d;
+}
+.b5 
+{
+    width: 70%;
+    background: #f1c40d;
+}
+.b6 
+{
+    width: 10%;
+    background: #f1c40d;
+}
+.label-skill 
+{
+    font-size: 24px;
+}
+
+
+
+
+
+
+/*---Section Contact---*/
+
+
+
+
+.section-contact
+ {
+    width: 100%; 
+    height: auto;
+}
+.section-contact h2 
+{
+    font-family: 'Abril Fatface', sans-serif;
+    text-align: center;
+    text-decoration: underline;
+    color: #303030;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 50px;
+    padding: 70px 0 0 300px;
+}
+.section-contact h2 strong 
+{
+    font-weight: 900;
+}
+
+.container-form 
+{
+    margin: 0 auto;
+    width: 70%;
+    padding-left: 300px;
+}
+.form-groupe 
+{
+    position: relative;
+    display: flex;
+    margin-bottom: 45px;
+}
+.form-groupe label 
+{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #030303;
+    font-size: 20px;
+    transition: 0.4s ease-out;
+}
+.form-groupe input 
+{
+    display: block;
+    width: 100%;
+    padding: 10px 0px;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 3px solid #030303;
+    color: #030303;
+    font-size: 20px;
+    transition: 0.4s all ease;
+}
+textarea {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border: 3px solid #030303;
+    border-radius: 3px;
+    padding: 5px;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+    transition: 0.4s all ease-out;
+    background: #f1c40d;
+}
+textarea::placeholder {
+    font-size: 20px;
+    color:#303030;
+}
+textarea:focus {
+    border-color: #030303;
+}
+
+.form-groupe:nth-child(4) {
+    margin-bottom: 25px;
+    justify-content: flex-start;
+}
+
+.form-groupe .button-sub {
+    display: block;
+    width: auto;
+    padding: 15px 60px;
+    border: 3px solid #030303;
+    border-radius: 999px;
+    background: #f1c40d;
+    background-size: 100%;
+    color: #303030;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.form-groupe .button-sub:hover 
+{
+    color:#f1f1f1;
+    background-position: 100%;
+    border: 3px solid #fff
+}
+
+
+
+/* Footer */
+
+footer 
+{
+    width: 100%;
+    text-align: center;
+    padding-top: 100px;
+    padding-left: 300px;
+}
